@@ -1,0 +1,291 @@
+Source: deadlinep5/macOS/DeadlineP5.app/Contents/MacOS/DeadlineP5
+Mach-O __TEXT: file offset 0, virtual address 0x10000.
+GNU objdump i386 disassembly of static bytes; not a runtime trace.
+
+Calendar-day countdown: Today, overdue clamp, DaysBetween
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+005ea7a8 <.data+0x5da7a8>:
+  5ea7a8:	55                   	push   %ebp
+  5ea7a9:	8b ec                	mov    %esp,%ebp
+  5ea7ab:	b9 10 00 00 00       	mov    $0x10,%ecx
+  5ea7b0:	6a 00                	push   $0x0
+  5ea7b2:	6a 00                	push   $0x0
+  5ea7b4:	49                   	dec    %ecx
+  5ea7b5:	75 f9                	jne    0x5ea7b0
+  5ea7b7:	51                   	push   %ecx
+  5ea7b8:	53                   	push   %ebx
+  5ea7b9:	56                   	push   %esi
+  5ea7ba:	83 c4 f4             	add    $0xfffffff4,%esp
+  5ea7bd:	e8 56 c4 a3 ff       	call   0x26c18
+  5ea7c2:	83 c4 0c             	add    $0xc,%esp
+  5ea7c5:	81 c3 3e 58 a1 ff    	add    $0xffa1583e,%ebx
+  5ea7cb:	8b f0                	mov    %eax,%esi
+  5ea7cd:	8b 86 ec 02 00 00    	mov    0x2ec(%esi),%eax
+  5ea7d3:	89 45 f8             	mov    %eax,-0x8(%ebp)
+  5ea7d6:	83 c4 f4             	add    $0xfffffff4,%esp
+  5ea7d9:	e8 7e 20 d0 ff       	call   0x2ec85c
+  5ea7de:	83 c4 0c             	add    $0xc,%esp
+  5ea7e1:	dd 5d f0             	fstpl  -0x10(%ebp)
+  5ea7e4:	9b                   	fwait
+  5ea7e5:	83 c4 f4             	add    $0xfffffff4,%esp
+  5ea7e8:	8d 55 b8             	lea    -0x48(%ebp),%edx
+  5ea7eb:	8b c6                	mov    %esi,%eax
+  5ea7ed:	e8 a2 55 00 00       	call   0x5efd94
+  5ea7f2:	83 c4 0c             	add    $0xc,%esp
+  5ea7f5:	dd 45 c8             	fldl   -0x38(%ebp)
+  5ea7f8:	dc 5d f0             	fcompl -0x10(%ebp)
+  5ea7fb:	9b df e0             	fstsw  %ax
+  5ea7fe:	9e                   	sahf   
+  5ea7ff:	73 0a                	jae    0x5ea80b
+  5ea801:	33 c0                	xor    %eax,%eax
+  5ea803:	89 86 ec 02 00 00    	mov    %eax,0x2ec(%esi)
+  5ea809:	eb 2d                	jmp    0x5ea838
+  5ea80b:	83 c4 f4             	add    $0xfffffff4,%esp
+  5ea80e:	ff 75 f4             	push   -0xc(%ebp)
+  5ea811:	ff 75 f0             	push   -0x10(%ebp)
+  5ea814:	83 c4 f8             	add    $0xfffffff8,%esp
+  5ea817:	8d 55 80             	lea    -0x80(%ebp),%edx
+  5ea81a:	8b c6                	mov    %esi,%eax
+  5ea81c:	e8 73 55 00 00       	call   0x5efd94
+  5ea821:	83 c4 08             	add    $0x8,%esp
+  5ea824:	ff 75 94             	push   -0x6c(%ebp)
+  5ea827:	ff 75 90             	push   -0x70(%ebp)
+  5ea82a:	e8 b1 22 d0 ff       	call   0x2ecae0
+  5ea82f:	83 c4 0c             	add    $0xc,%esp
+  5ea832:	89 86 ec 02 00 00    	mov    %eax,0x2ec(%esi)
+  5ea838:	8b 86 ec 02 00 00    	mov    0x2ec(%esi),%eax
+  5ea83e:	3b 45 f8             	cmp    -0x8(%ebp),%eax
+  5ea841:	0f 95 45 ff          	setne  -0x1(%ebp)
+  5ea845:	68 73 a8 5e 00       	push   $0x5ea873
+  5ea84a:	01 1c 24             	add    %ebx,(%esp)
+  5ea84d:	8d 45 80             	lea    -0x80(%ebp),%eax
+  5ea850:	8b 93 8c 29 8e 00    	mov    0x8e298c(%ebx),%edx
+  5ea856:	b9 02 00 00 00       	mov    $0x2,%ecx
+  5ea85b:	83 c4 f8             	add    $0xfffffff8,%esp
+  5ea85e:	e8 09 0b a3 ff       	call   0x1b36c
+  5ea863:	83 c4 08             	add    $0x8,%esp
+  5ea866:	c3                   	ret    
+  5ea867:	eb 0a                	jmp    0x5ea873
+  5ea869:	83 c4 f4             	add    $0xfffffff4,%esp
+  5ea86c:	e8 9f d8 a2 ff       	call   0x18110
+  5ea871:	eb da                	jmp    0x5ea84d
+  5ea873:	0f b6 45 ff          	movzbl -0x1(%ebp),%eax
+  5ea877:	5e                   	pop    %esi
+  5ea878:	5b                   	pop    %ebx
+  5ea879:	8b e5                	mov    %ebp,%esp
+  5ea87b:	5d                   	pop    %ebp
+  5ea87c:	c3                   	ret    
+
+Today implementation and symbol
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+002ec85c <.data+0x2dc85c>:
+  2ec85c:	53                   	push   %ebx
+  2ec85d:	83 c4 f4             	add    $0xfffffff4,%esp
+  2ec860:	83 c4 f4             	add    $0xfffffff4,%esp
+  2ec863:	e8 b0 a3 d3 ff       	call   0x26c18
+  2ec868:	83 c4 0c             	add    $0xc,%esp
+  2ec86b:	81 c3 98 37 d1 ff    	add    $0xffd13798,%ebx
+  2ec871:	83 c4 f4             	add    $0xfffffff4,%esp
+  2ec874:	e8 07 25 d5 ff       	call   0x3ed80
+  2ec879:	83 c4 0c             	add    $0xc,%esp
+  2ec87c:	dd 1c 24             	fstpl  (%esp)
+  2ec87f:	9b dd 04 24          	fldl   (%esp)
+  2ec883:	83 c4 0c             	add    $0xc,%esp
+  2ec886:	5b                   	pop    %ebx
+  2ec887:	c3                   	ret    
+  2ec888:	f8                   	clc    
+  2ec889:	02 e8                	add    %al,%ch
+  2ec88b:	06                   	push   %es
+  2ec88c:	e8 06 18 10 e8       	call   0xe83ee097
+  2ec891:	12 18                	adc    (%eax),%bl
+  2ec893:	10 18                	adc    %bl,(%eax)
+  2ec895:	14 08                	adc    $0x8,%al
+  2ec897:	02 08                	add    (%eax),%cl
+  2ec899:	02 54 6f 64          	add    0x64(%edi,%ebp,2),%dl
+  2ec89d:	61                   	popa   
+  2ec89e:	79 00                	jns    0x2ec8a0
+  2ec8a0:	06                   	push   %es
+  2ec8a1:	00 00                	add    %al,(%eax)
+  2ec8a3:	00 58 24             	add    %bl,0x24(%eax)
+  2ec8a6:	02 41 55             	add    0x55(%ecx),%al
+  2ec8a9:	8b ec                	mov    %esp,%ebp
+  2ec8ab:	83 c4 f8             	add    $0xfffffff8,%esp
+  2ec8ae:	53                   	push   %ebx
+  2ec8af:	83               	add    $0xfffffff4,%esp
+
+DaysBetween implementation and symbol
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+002ecae0 <.data+0x2dcae0>:
+  2ecae0:	55                   	push   %ebp
+  2ecae1:	8b ec                	mov    %esp,%ebp
+  2ecae3:	83 c4 f8             	add    $0xfffffff8,%esp
+  2ecae6:	53                   	push   %ebx
+  2ecae7:	83 c4 f4             	add    $0xfffffff4,%esp
+  2ecaea:	e8 29 a1 d3 ff       	call   0x26c18
+  2ecaef:	83 c4 0c             	add    $0xc,%esp
+  2ecaf2:	81 c3 11 35 d1 ff    	add    $0xffd13511,%ebx
+  2ecaf8:	83 c4 fc             	add    $0xfffffffc,%esp
+  2ecafb:	6a 00                	push   $0x0
+  2ecafd:	68 00 5c 26 05       	push   $0x5265c00
+  2ecb02:	83 c4 f8             	add    $0xfffffff8,%esp
+  2ecb05:	ff 75 14             	push   0x14(%ebp)
+  2ecb08:	ff 75 10             	push   0x10(%ebp)
+  2ecb0b:	e8 3c ff ff ff       	call   0x2eca4c
+  2ecb10:	83 c4 08             	add    $0x8,%esp
+  2ecb13:	52                   	push   %edx
+  2ecb14:	50                   	push   %eax
+  2ecb15:	ff 75 0c             	push   0xc(%ebp)
+  2ecb18:	ff 75 08             	push   0x8(%ebp)
+  2ecb1b:	e8 2c ff ff ff       	call   0x2eca4c
+  2ecb20:	29 04 24             	sub    %eax,(%esp)
+  2ecb23:	19 54 24 04          	sbb    %edx,0x4(%esp)
+  2ecb27:	58                   	pop    %eax
+  2ecb28:	5a                   	pop    %edx
+  2ecb29:	85 d2                	test   %edx,%edx
+  2ecb2b:	7d 07                	jge    0x2ecb34
+  2ecb2d:	f7 d8                	neg    %eax
+  2ecb2f:	83 d2 00             	adc    $0x0,%edx
+  2ecb32:	f7 da                	neg    %edx
+  2ecb34:	e8 17 f5 d2 ff       	call   0x1c050
+  2ecb39:	59                   	pop    %ecx
+  2ecb3a:	89 45 fc             	mov    %eax,-0x4(%ebp)
+  2ecb3d:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  2ecb40:	5b                   	pop    %ebx
+  2ecb41:	59                   	pop    %ecx
+  2ecb42:	59                   	pop    %ecx
+  2ecb43:	5d                   	pop    %ebp
+  2ecb44:	c2 10 00             	ret    $0x10
+  2ecb47:	44                   	inc    %esp
+  2ecb48:	61                   	popa   
+  2ecb49:	79 73                	jns    0x2ecbbe
+  2ecb4b:	42                   	inc    %edx
+  2ecb4c:	65 74 77             	gs je  0x2ecbc6
+  2ecb4f:	65 65 6e             	gs outsb %gs:(%esi),(%dx)
+  2ecb52:	00 0c 00             	add    %cl,(%eax,%eax,1)
+  2ecb55:	00 00                	add    %al,(%eax)
+  2ecb57:	ff                   	(bad)  
+  2ecb58:	ff                   	(bad)  
+  2ecb59:	ff                   	(bad)  
+  2ecb5a:	f8                   	clc    
+  2ecb5b:	0f 20 d1             	mov    %cr2,%ecx
+  2ecb5e:	8b c0                	mov    %eax,%eax
+  2ecb60:	55                   	push   %ebp
+  2ecb61:	8b ec                	mov    %esp,%ebp
+  2ecb63:	83               	add    $0xffffffa8,%esp
+
+Default deadline: Today + IncHour(240)
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+005de764 <.data+0x5ce764>:
+  5de764:	83 c4 f4             	add    $0xfffffff4,%esp
+  5de767:	e8 f0 e0 d0 ff       	call   0x2ec85c
+  5de76c:	83 c4 0c             	add    $0xc,%esp
+  5de76f:	dd 5d f0             	fstpl  -0x10(%ebp)
+  5de772:	9b                   	fwait
+  5de773:	83 c4 f4             	add    $0xfffffff4,%esp
+  5de776:	ff 75 f4             	push   -0xc(%ebp)
+  5de779:	ff 75 f0             	push   -0x10(%ebp)
+  5de77c:	6a 00                	push   $0x0
+  5de77e:	68 f0 00 00 00       	push   $0xf0
+  5de783:	e8 38 e5 d0 ff       	call   0x2eccc0
+  5de788:	83 c4 0c             	add    $0xc,%esp
+  5de78b:	dd 5d e8             	fstpl  -0x18(%ebp)
+  5de78e:	9b                   	fwait
+  5de78f:	83 c4 fc             	add    $0xfffffffc,%esp
+  5de792:	ff 75 ec             	push   -0x14(%ebp)
+  5de795:	ff 75 e8             	push   -0x18(%ebp)
+  5de798:	8d 93 ac e9 5d 00    	lea    0x5de9ac(%ebx),%edx
+  5de79e:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  5de7a1:	e8 8a f3 ff ff       	call   0x5ddb30
+  5de7a6:	83 c4 04             	add    $0x4,%esp
+  5de7a9:	dd 5e 10             	fstpl  0x10(%esi)
+
+IncHour implementation and symbol
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+002eccc0 <.data+0x2dccc0>:
+  2eccc0:	55                   	push   %ebp
+  2eccc1:	8b ec                	mov    %esp,%ebp
+  2eccc3:	83 c4 f8             	add    $0xfffffff8,%esp
+  2eccc6:	53                   	push   %ebx
+  2eccc7:	83 c4 f4             	add    $0xfffffff4,%esp
+  2eccca:	e8 49 9f d3 ff       	call   0x26c18
+  2ecccf:	83 c4 0c             	add    $0xc,%esp
+  2eccd2:	81 c3 31 33 d1 ff    	add    $0xffd13331,%ebx
+  2eccd8:	83 c4 f4             	add    $0xfffffff4,%esp
+  2eccdb:	ff 75 14             	push   0x14(%ebp)
+  2eccde:	ff 75 10             	push   0x10(%ebp)
+  2ecce1:	6a 00                	push   $0x0
+  2ecce3:	6a 3c                	push   $0x3c
+  2ecce5:	8b 45 08             	mov    0x8(%ebp),%eax
+  2ecce8:	8b 55 0c             	mov    0xc(%ebp),%edx
+  2ecceb:	e8 e0 f2 d2 ff       	call   0x1bfd0
+  2eccf0:	52                   	push   %edx
+  2eccf1:	50                   	push   %eax
+  2eccf2:	e8 25 00 00 00       	call   0x2ecd1c
+  2eccf7:	83 c4 0c             	add    $0xc,%esp
+  2eccfa:	dd 5d f8             	fstpl  -0x8(%ebp)
+  2eccfd:	9b dd 45 f8          	fldl   -0x8(%ebp)
+  2ecd01:	5b                   	pop    %ebx
+  2ecd02:	59                   	pop    %ecx
+  2ecd03:	59                   	pop    %ecx
+  2ecd04:	5d                   	pop    %ebp
+  2ecd05:	c2 10 00             	ret    $0x10
+  2ecd08:	49                   	dec    %ecx
+  2ecd09:	6e                   	outsb  %ds:(%esi),(%dx)
+  2ecd0a:	63 48 6f             	arpl   %cx,0x6f(%eax)
+  2ecd0d:	75 72                	jne    0x2ecd81
+	...
+
+IgnoreClick=false, StayOnTop=true, Scale=1
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+005de8e0 <.data+0x5ce8e0>:
+  5de8e0:	83 c4 f4             	add    $0xfffffff4,%esp
+  5de8e3:	33 c9                	xor    %ecx,%ecx
+  5de8e5:	8d 93 18 eb 5d 00    	lea    0x5deb18(%ebx),%edx
+  5de8eb:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  5de8ee:	e8 b9 f1 ff ff       	call   0x5ddaac
+  5de8f3:	83 c4 0c             	add    $0xc,%esp
+  5de8f6:	88 46 30             	mov    %al,0x30(%esi)
+  5de8f9:	83 c4 f4             	add    $0xfffffff4,%esp
+  5de8fc:	b1 01                	mov    $0x1,%cl
+  5de8fe:	8d 93 3c eb 5d 00    	lea    0x5deb3c(%ebx),%edx
+  5de904:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  5de907:	e8 a0 f1 ff ff       	call   0x5ddaac
+  5de90c:	83 c4 0c             	add    $0xc,%esp
+  5de90f:	88 46 31             	mov    %al,0x31(%esi)
+  5de912:	83 c4 f8             	add    $0xfffffff8,%esp
+  5de915:	68 00 00 80 3f       	push   $0x3f800000
+  5de91a:	8d 93 5c eb 5d 00    	lea    0x5deb5c(%ebx),%edx
+  5de920:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  5de923:	e8 f4 f2 ff ff       	call   0x5ddc1c
+  5de928:	83 c4 08             	add    $0x8,%esp
+  5de92b:	d9 5e 04             	fstps  0x4(%esi)

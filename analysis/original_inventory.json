@@ -1,0 +1,1058 @@
+[
+  {
+    "path": "deadlinep5/Windows/DeadlineP5.exe",
+    "bytes": 8891904,
+    "sha256": "46b2408ec7640e59164449173eb342d1a64006a71efc723cc9c3094a9f7ac2d1",
+    "forms": [
+      {
+        "file_offset": "0x616358",
+        "class": "TConfigForm",
+        "name": "ConfigForm",
+        "properties": {
+          "Left": 0,
+          "Top": 0,
+          "BorderIcons": [],
+          "BorderStyle": "Single",
+          "Caption": "設定",
+          "ClientHeight": 308,
+          "ClientWidth": 459,
+          "Position": "Designed",
+          "FormFactor.Width": 320,
+          "FormFactor.Height": 480,
+          "FormFactor.Devices": [
+            "Desktop"
+          ],
+          "OnCreate": "FormCreate",
+          "DesignerMasterStyle": 1
+        },
+        "children": [
+          {
+            "class": "TLabel",
+            "name": "Label1",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 8.0,
+              "Size.Width": 57.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "期限："
+            },
+            "children": []
+          },
+          {
+            "class": "TDateEdit",
+            "name": "DateEdit1",
+            "properties": {
+              "Date": 42642.0,
+              "OnChange": "PreviewChange",
+              "Position.X": 8.0,
+              "Position.Y": 28.0,
+              "Size.Width": 133.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 0
+            },
+            "children": []
+          },
+          {
+            "class": "TButton",
+            "name": "btnOk",
+            "properties": {
+              "Anchors": [
+                "akRight",
+                "akBottom"
+              ],
+              "ModalResult": 1,
+              "Position.X": 369.0,
+              "Position.Y": 277.0,
+              "TabOrder": 11,
+              "Text": "OK"
+            },
+            "children": []
+          },
+          {
+            "class": "TButton",
+            "name": "btnCancel",
+            "properties": {
+              "Anchors": [
+                "akRight",
+                "akBottom"
+              ],
+              "ModalResult": 2,
+              "Position.X": 273.0,
+              "Position.Y": 277.0,
+              "TabOrder": 12,
+              "Text": "キャンセル"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label2",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 56.0,
+              "Size.Width": 177.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "期限テキスト(７文字まで)："
+            },
+            "children": []
+          },
+          {
+            "class": "TEdit",
+            "name": "edLine1Text",
+            "properties": {
+              "Touch.InteractiveGestures": [
+                "LongTap",
+                "DoubleTap"
+              ],
+              "TabOrder": 3,
+              "MaxLength": 7,
+              "Position.X": 8.0,
+              "Position.Y": 76.0,
+              "Size.Width": 237.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "OnChangeTracking": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label3",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 104.0,
+              "Size.Width": 181.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "メインタスク(15文字まで)："
+            },
+            "children": []
+          },
+          {
+            "class": "TEdit",
+            "name": "edLine2Text",
+            "properties": {
+              "Touch.InteractiveGestures": [
+                "LongTap",
+                "DoubleTap"
+              ],
+              "TabOrder": 5,
+              "MaxLength": 15,
+              "Position.X": 8.0,
+              "Position.Y": 124.0,
+              "Size.Width": 237.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "OnChangeTracking": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label4",
+            "properties": {
+              "Position.X": 248.0,
+              "Position.Y": 56.0,
+              "Size.Width": 77.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "フォント："
+            },
+            "children": []
+          },
+          {
+            "class": "TComboBox",
+            "name": "cbLine1Font",
+            "properties": {
+              "DropDownCount": 16,
+              "Position.X": 248.0,
+              "Position.Y": 76.0,
+              "Size.Width": 201.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 4,
+              "OnChange": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TComboBox",
+            "name": "cbLine2Font",
+            "properties": {
+              "DropDownCount": 16,
+              "Position.X": 248.0,
+              "Position.Y": 124.0,
+              "Size.Width": 201.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 6,
+              "OnChange": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label5",
+            "properties": {
+              "Position.X": 248.0,
+              "Position.Y": 104.0,
+              "Size.Width": 77.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "フォント："
+            },
+            "children": []
+          },
+          {
+            "class": "TComboColorBox",
+            "name": "ComboColorBox1",
+            "properties": {
+              "Color": "claWhite",
+              "Position.X": 248.0,
+              "Position.Y": 28.0,
+              "Size.Width": 57.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 1,
+              "OnChange": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label6",
+            "properties": {
+              "Position.X": 248.0,
+              "Position.Y": 8.0,
+              "Size.Width": 65.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "カラー："
+            },
+            "children": []
+          },
+          {
+            "class": "TCheckBox",
+            "name": "cbIgnoreClick",
+            "properties": {
+              "Anchors": [
+                "akLeft",
+                "akBottom"
+              ],
+              "Position.X": 8.0,
+              "Position.Y": 253.0,
+              "Size.Width": 185.0,
+              "Size.Height": 19.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 9,
+              "Text": "クリックイベントを無視"
+            },
+            "children": []
+          },
+          {
+            "class": "TCheckBox",
+            "name": "cbStayOnTop",
+            "properties": {
+              "Anchors": [
+                "akLeft",
+                "akBottom"
+              ],
+              "Position.X": 8.0,
+              "Position.Y": 277.0,
+              "Size.Width": 185.0,
+              "Size.Height": 19.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 10,
+              "Text": "常に最前面に表示"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label7",
+            "properties": {
+              "Position.X": 348.0,
+              "Position.Y": 8.0,
+              "Size.Width": 77.0,
+              "Size.Height": 17.0,
+              "Size.PlatformDefault": false,
+              "Text": "スケール："
+            },
+            "children": []
+          },
+          {
+            "class": "TComboBox",
+            "name": "cbScale",
+            "properties": {
+              "Position.X": 348.0,
+              "Position.Y": 28.0,
+              "TabOrder": 2,
+              "OnChange": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label8",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 152.0,
+              "Size.Width": 181.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "サブタスク１(15文字まで)："
+            },
+            "children": []
+          },
+          {
+            "class": "TEdit",
+            "name": "edSubText1",
+            "properties": {
+              "Touch.InteractiveGestures": [
+                "LongTap",
+                "DoubleTap"
+              ],
+              "TabOrder": 7,
+              "MaxLength": 15,
+              "Position.X": 8.0,
+              "Position.Y": 172.0,
+              "Size.Width": 237.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "OnChangeTracking": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label9",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 200.0,
+              "Size.Width": 181.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "サブタスク２(15文字まで)："
+            },
+            "children": []
+          },
+          {
+            "class": "TEdit",
+            "name": "edSubText2",
+            "properties": {
+              "Touch.InteractiveGestures": [
+                "LongTap",
+                "DoubleTap"
+              ],
+              "TabOrder": 8,
+              "MaxLength": 15,
+              "Position.X": 8.0,
+              "Position.Y": 220.0,
+              "Size.Width": 237.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "OnChangeTracking": "PreviewChange"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "file_offset": "0x617350",
+        "class": "TDummyForm",
+        "name": "DummyForm",
+        "properties": {
+          "Left": 0,
+          "Top": 0,
+          "BorderStyle": "None",
+          "ClientHeight": 0,
+          "ClientWidth": 0,
+          "Transparency": true,
+          "FormFactor.Width": 320,
+          "FormFactor.Height": 480,
+          "FormFactor.Devices": [
+            "Desktop"
+          ],
+          "OnCreate": "FormCreate",
+          "OnShow": "FormShow",
+          "DesignerMasterStyle": 0
+        },
+        "children": []
+      },
+      {
+        "file_offset": "0x617438",
+        "class": "TMainForm",
+        "name": "MainForm",
+        "properties": {
+          "Left": 0,
+          "Top": 0,
+          "BorderIcons": [
+            "biSystemMenu",
+            "biMinimize"
+          ],
+          "BorderStyle": "None",
+          "ClientHeight": 200,
+          "ClientWidth": 600,
+          "Fill.Color": "claNull",
+          "Fill.Kind": "Solid",
+          "Position": "Designed",
+          "Quality": "HighQuality",
+          "Transparency": true,
+          "FormStyle": "StayOnTop",
+          "FormFactor.Width": 320,
+          "FormFactor.Height": 480,
+          "FormFactor.Devices": [
+            "Desktop"
+          ],
+          "OnDestroy": "FormDestroy",
+          "OnKeyDown": "FormKeyDown",
+          "OnMouseDown": "FormMouseDown",
+          "OnPaint": "FormPaint",
+          "OnShow": "FormShow",
+          "DesignerMasterStyle": 1
+        },
+        "children": [
+          {
+            "class": "TTimer",
+            "name": "Timer1",
+            "properties": {
+              "OnTimer": "Timer1Timer",
+              "Left": 152,
+              "Top": 16
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "strings": [
+      {
+        "file_offset": "0x1e763c",
+        "text": "Scale"
+      },
+      {
+        "file_offset": "0x1e7aa8",
+        "text": "Scale"
+      },
+      {
+        "file_offset": "0x539bcc",
+        "text": "Deadline"
+      },
+      {
+        "file_offset": "0x539c04",
+        "text": "納期"
+      },
+      {
+        "file_offset": "0x539c18",
+        "text": "Line1Text"
+      },
+      {
+        "file_offset": "0x539c38",
+        "text": "おしごとたのしいな"
+      },
+      {
+        "file_offset": "0x539c58",
+        "text": "Line2Text"
+      },
+      {
+        "file_offset": "0x539c78",
+        "text": "SubText1"
+      },
+      {
+        "file_offset": "0x539c98",
+        "text": "SubText2"
+      },
+      {
+        "file_offset": "0x539cd4",
+        "text": "Line1Font"
+      },
+      {
+        "file_offset": "0x539cf4",
+        "text": "Line2Font"
+      },
+      {
+        "file_offset": "0x539d14",
+        "text": "IgnoreClick"
+      },
+      {
+        "file_offset": "0x539d38",
+        "text": "StayOnTop"
+      },
+      {
+        "file_offset": "0x539d58",
+        "text": "Scale"
+      },
+      {
+        "file_offset": "0x539ed0",
+        "text": "Deadline"
+      },
+      {
+        "file_offset": "0x539f08",
+        "text": "Line1Text"
+      },
+      {
+        "file_offset": "0x539f28",
+        "text": "Line2Text"
+      },
+      {
+        "file_offset": "0x539f48",
+        "text": "SubText1"
+      },
+      {
+        "file_offset": "0x539f68",
+        "text": "SubText2"
+      },
+      {
+        "file_offset": "0x539f88",
+        "text": "Line1Font"
+      },
+      {
+        "file_offset": "0x539fa8",
+        "text": "Line2Font"
+      },
+      {
+        "file_offset": "0x539fc8",
+        "text": "IgnoreClick"
+      },
+      {
+        "file_offset": "0x539fec",
+        "text": "StayOnTop"
+      },
+      {
+        "file_offset": "0x53a00c",
+        "text": "Scale"
+      }
+    ]
+  },
+  {
+    "path": "deadlinep5/macOS/DeadlineP5.app/Contents/MacOS/DeadlineP5",
+    "bytes": 10458499,
+    "sha256": "d620186006f43e70ddb3dace5e6b87bca3e197fb89976400b1a5d3120fdb59e2",
+    "forms": [
+      {
+        "file_offset": "0x8dafcb",
+        "class": "TMainForm",
+        "name": "MainForm",
+        "properties": {
+          "Left": 0,
+          "Top": 0,
+          "BorderIcons": [
+            "biSystemMenu",
+            "biMinimize"
+          ],
+          "BorderStyle": "None",
+          "ClientHeight": 200,
+          "ClientWidth": 600,
+          "Fill.Color": "claNull",
+          "Fill.Kind": "Solid",
+          "Position": "Designed",
+          "Quality": "HighQuality",
+          "Transparency": true,
+          "FormStyle": "StayOnTop",
+          "FormFactor.Width": 320,
+          "FormFactor.Height": 480,
+          "FormFactor.Devices": [
+            "Desktop"
+          ],
+          "OnDestroy": "FormDestroy",
+          "OnKeyDown": "FormKeyDown",
+          "OnMouseDown": "FormMouseDown",
+          "OnPaint": "FormPaint",
+          "OnShow": "FormShow",
+          "DesignerMasterStyle": 1
+        },
+        "children": [
+          {
+            "class": "TTimer",
+            "name": "Timer1",
+            "properties": {
+              "OnTimer": "Timer1Timer",
+              "Left": 152,
+              "Top": 16
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "file_offset": "0x8db1b4",
+        "class": "TDummyForm",
+        "name": "DummyForm",
+        "properties": {
+          "Left": 0,
+          "Top": 0,
+          "BorderStyle": "None",
+          "ClientHeight": 100,
+          "ClientWidth": 100,
+          "Transparency": true,
+          "FormFactor.Width": 320,
+          "FormFactor.Height": 480,
+          "FormFactor.Devices": [
+            "Desktop"
+          ],
+          "OnCreate": "FormCreate",
+          "OnShow": "FormShow",
+          "DesignerMasterStyle": 0
+        },
+        "children": []
+      },
+      {
+        "file_offset": "0x8db29b",
+        "class": "TConfigForm",
+        "name": "ConfigForm",
+        "properties": {
+          "Left": 0,
+          "Top": 0,
+          "BorderIcons": [],
+          "BorderStyle": "Single",
+          "Caption": "設定",
+          "ClientHeight": 308,
+          "ClientWidth": 459,
+          "Position": "Designed",
+          "FormFactor.Width": 320,
+          "FormFactor.Height": 480,
+          "FormFactor.Devices": [
+            "Desktop"
+          ],
+          "OnCreate": "FormCreate",
+          "DesignerMasterStyle": 1
+        },
+        "children": [
+          {
+            "class": "TLabel",
+            "name": "Label1",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 8.0,
+              "Size.Width": 57.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "期限："
+            },
+            "children": []
+          },
+          {
+            "class": "TDateEdit",
+            "name": "DateEdit1",
+            "properties": {
+              "Date": 42642.0,
+              "OnChange": "PreviewChange",
+              "Position.X": 8.0,
+              "Position.Y": 28.0,
+              "Size.Width": 133.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 0
+            },
+            "children": []
+          },
+          {
+            "class": "TButton",
+            "name": "btnOk",
+            "properties": {
+              "Anchors": [
+                "akRight",
+                "akBottom"
+              ],
+              "ModalResult": 1,
+              "Position.X": 369.0,
+              "Position.Y": 277.0,
+              "TabOrder": 11,
+              "Text": "OK"
+            },
+            "children": []
+          },
+          {
+            "class": "TButton",
+            "name": "btnCancel",
+            "properties": {
+              "Anchors": [
+                "akRight",
+                "akBottom"
+              ],
+              "ModalResult": 2,
+              "Position.X": 273.0,
+              "Position.Y": 277.0,
+              "TabOrder": 12,
+              "Text": "キャンセル"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label2",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 56.0,
+              "Size.Width": 177.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "期限テキスト(７文字まで)："
+            },
+            "children": []
+          },
+          {
+            "class": "TEdit",
+            "name": "edLine1Text",
+            "properties": {
+              "Touch.InteractiveGestures": [
+                "LongTap",
+                "DoubleTap"
+              ],
+              "TabOrder": 3,
+              "MaxLength": 7,
+              "Position.X": 8.0,
+              "Position.Y": 76.0,
+              "Size.Width": 237.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "OnChangeTracking": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label3",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 104.0,
+              "Size.Width": 181.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "メインタスク(15文字まで)："
+            },
+            "children": []
+          },
+          {
+            "class": "TEdit",
+            "name": "edLine2Text",
+            "properties": {
+              "Touch.InteractiveGestures": [
+                "LongTap",
+                "DoubleTap"
+              ],
+              "TabOrder": 5,
+              "MaxLength": 15,
+              "Position.X": 8.0,
+              "Position.Y": 124.0,
+              "Size.Width": 237.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "OnChangeTracking": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label4",
+            "properties": {
+              "Position.X": 248.0,
+              "Position.Y": 56.0,
+              "Size.Width": 77.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "フォント："
+            },
+            "children": []
+          },
+          {
+            "class": "TComboBox",
+            "name": "cbLine1Font",
+            "properties": {
+              "DropDownCount": 16,
+              "Position.X": 248.0,
+              "Position.Y": 76.0,
+              "Size.Width": 201.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 4,
+              "OnChange": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TComboBox",
+            "name": "cbLine2Font",
+            "properties": {
+              "DropDownCount": 16,
+              "Position.X": 248.0,
+              "Position.Y": 124.0,
+              "Size.Width": 201.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 6,
+              "OnChange": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label5",
+            "properties": {
+              "Position.X": 248.0,
+              "Position.Y": 104.0,
+              "Size.Width": 77.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "フォント："
+            },
+            "children": []
+          },
+          {
+            "class": "TComboColorBox",
+            "name": "ComboColorBox1",
+            "properties": {
+              "Color": "claWhite",
+              "Position.X": 248.0,
+              "Position.Y": 28.0,
+              "Size.Width": 57.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 1,
+              "OnChange": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label6",
+            "properties": {
+              "Position.X": 248.0,
+              "Position.Y": 8.0,
+              "Size.Width": 65.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "カラー："
+            },
+            "children": []
+          },
+          {
+            "class": "TCheckBox",
+            "name": "cbIgnoreClick",
+            "properties": {
+              "Anchors": [
+                "akLeft",
+                "akBottom"
+              ],
+              "Position.X": 8.0,
+              "Position.Y": 253.0,
+              "Size.Width": 185.0,
+              "Size.Height": 19.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 9,
+              "Text": "クリックイベントを無視"
+            },
+            "children": []
+          },
+          {
+            "class": "TCheckBox",
+            "name": "cbStayOnTop",
+            "properties": {
+              "Anchors": [
+                "akLeft",
+                "akBottom"
+              ],
+              "Position.X": 8.0,
+              "Position.Y": 277.0,
+              "Size.Width": 185.0,
+              "Size.Height": 19.0,
+              "Size.PlatformDefault": false,
+              "TabOrder": 10,
+              "Text": "常に最前面に表示"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label7",
+            "properties": {
+              "Position.X": 348.0,
+              "Position.Y": 8.0,
+              "Size.Width": 77.0,
+              "Size.Height": 17.0,
+              "Size.PlatformDefault": false,
+              "Text": "スケール："
+            },
+            "children": []
+          },
+          {
+            "class": "TComboBox",
+            "name": "cbScale",
+            "properties": {
+              "Position.X": 348.0,
+              "Position.Y": 28.0,
+              "TabOrder": 2,
+              "OnChange": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label8",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 152.0,
+              "Size.Width": 181.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "サブタスク１(15文字まで)："
+            },
+            "children": []
+          },
+          {
+            "class": "TEdit",
+            "name": "edSubText1",
+            "properties": {
+              "Touch.InteractiveGestures": [
+                "LongTap",
+                "DoubleTap"
+              ],
+              "TabOrder": 7,
+              "MaxLength": 15,
+              "Position.X": 8.0,
+              "Position.Y": 172.0,
+              "Size.Width": 237.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "OnChangeTracking": "PreviewChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TLabel",
+            "name": "Label9",
+            "properties": {
+              "Position.X": 8.0,
+              "Position.Y": 200.0,
+              "Size.Width": 181.0,
+              "Size.Height": 16.0,
+              "Size.PlatformDefault": false,
+              "Text": "サブタスク２(15文字まで)："
+            },
+            "children": []
+          },
+          {
+            "class": "TEdit",
+            "name": "edSubText2",
+            "properties": {
+              "Touch.InteractiveGestures": [
+                "LongTap",
+                "DoubleTap"
+              ],
+              "TabOrder": 8,
+              "MaxLength": 15,
+              "Position.X": 8.0,
+              "Position.Y": 220.0,
+              "Size.Width": 237.0,
+              "Size.Height": 22.0,
+              "Size.PlatformDefault": false,
+              "OnChangeTracking": "PreviewChange"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "strings": [
+      {
+        "file_offset": "0x29fe6c",
+        "text": "Scale"
+      },
+      {
+        "file_offset": "0x2a04d4",
+        "text": "Scale"
+      },
+      {
+        "file_offset": "0x5ce9ac",
+        "text": "Deadline"
+      },
+      {
+        "file_offset": "0x5ce9e4",
+        "text": "納期"
+      },
+      {
+        "file_offset": "0x5ce9f8",
+        "text": "Line1Text"
+      },
+      {
+        "file_offset": "0x5cea18",
+        "text": "おしごとたのしいな"
+      },
+      {
+        "file_offset": "0x5cea38",
+        "text": "Line2Text"
+      },
+      {
+        "file_offset": "0x5cea58",
+        "text": "SubText1"
+      },
+      {
+        "file_offset": "0x5cea78",
+        "text": "SubText2"
+      },
+      {
+        "file_offset": "0x5cead8",
+        "text": "Line1Font"
+      },
+      {
+        "file_offset": "0x5ceaf8",
+        "text": "Line2Font"
+      },
+      {
+        "file_offset": "0x5ceb18",
+        "text": "IgnoreClick"
+      },
+      {
+        "file_offset": "0x5ceb3c",
+        "text": "StayOnTop"
+      },
+      {
+        "file_offset": "0x5ceb5c",
+        "text": "Scale"
+      },
+      {
+        "file_offset": "0x5ced88",
+        "text": "Deadline"
+      },
+      {
+        "file_offset": "0x5cedc0",
+        "text": "Line1Text"
+      },
+      {
+        "file_offset": "0x5cede0",
+        "text": "Line2Text"
+      },
+      {
+        "file_offset": "0x5cee00",
+        "text": "SubText1"
+      },
+      {
+        "file_offset": "0x5cee20",
+        "text": "SubText2"
+      },
+      {
+        "file_offset": "0x5cee40",
+        "text": "Line1Font"
+      },
+      {
+        "file_offset": "0x5cee60",
+        "text": "Line2Font"
+      },
+      {
+        "file_offset": "0x5cee80",
+        "text": "IgnoreClick"
+      },
+      {
+        "file_offset": "0x5ceea4",
+        "text": "StayOnTop"
+      },
+      {
+        "file_offset": "0x5ceec4",
+        "text": "Scale"
+      }
+    ]
+  }
+]

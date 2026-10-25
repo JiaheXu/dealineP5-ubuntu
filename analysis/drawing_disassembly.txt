@@ -1,0 +1,168 @@
+Source: supplied macOS DeadlineP5. __TEXT file offset 0 -> VA 0x10000.
+Static i386 disassembly, not runtime observations.
+
+Numeral spacing, anchors, per-digit tilts
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+005ed01a <.data+0x5dd01a>:
+  5ed01a:	c7 45 b8 00 80 06 44 	movl   $0x44068000,-0x48(%ebp)
+  5ed021:	33 c0                	xor    %eax,%eax
+  5ed023:	89 85 c0 fe ff ff    	mov    %eax,-0x140(%ebp)
+  5ed029:	c7 85 c4 fe ff ff 00 	movl   $0xc2aa0000,-0x13c(%ebp)
+  5ed030:	00 aa c2 
+  5ed033:	33 c0                	xor    %eax,%eax
+  5ed035:	89 85 cc fe ff ff    	mov    %eax,-0x134(%ebp)
+  5ed03b:	c7 85 c8 fe ff ff 00 	movl   $0x42820000,-0x138(%ebp)
+  5ed042:	00 82 42 
+  5ed045:	8d b5 c0 fe ff ff    	lea    -0x140(%ebp),%esi
+  5ed04b:	8d bd 04 ff ff ff    	lea    -0xfc(%ebp),%edi
+  5ed051:	a5                   	movsl  %ds:(%esi),%es:(%edi)
+  5ed052:	a5                   	movsl  %ds:(%esi),%es:(%edi)
+  5ed053:	a5                   	movsl  %ds:(%esi),%es:(%edi)
+  5ed054:	a5                   	movsl  %ds:(%esi),%es:(%edi)
+  5ed055:	8b 45 f0             	mov    -0x10(%ebp),%eax
+  5ed058:	89 45 80             	mov    %eax,-0x80(%ebp)
+  5ed05b:	83 7d 80 00          	cmpl   $0x0,-0x80(%ebp)
+  5ed05f:	74 0b                	je     0x5ed06c
+  5ed061:	8b 45 80             	mov    -0x80(%ebp),%eax
+  5ed064:	83 e8 04             	sub    $0x4,%eax
+  5ed067:	8b 00                	mov    (%eax),%eax
+  5ed069:	89 45 80             	mov    %eax,-0x80(%ebp)
+  5ed06c:	8b 75 80             	mov    -0x80(%ebp),%esi
+  5ed06f:	83 fe 01             	cmp    $0x1,%esi
+  5ed072:	0f 8c 42 01 00 00    	jl     0x5ed1ba
+  5ed078:	83 c4 f4             	add    $0xfffffff4,%esp
+  5ed07b:	8b 45 a8             	mov    -0x58(%ebp),%eax
+  5ed07e:	e8 a5 94 c0 ff       	call   0x1f6528
+  5ed083:	83 c4 0c             	add    $0xc,%esp
+  5ed086:	8b 45 f0             	mov    -0x10(%ebp),%eax
+  5ed089:	89 85 7c ff ff ff    	mov    %eax,-0x84(%ebp)
+  5ed08f:	83 bd 7c ff ff ff 00 	cmpl   $0x0,-0x84(%ebp)
+  5ed096:	74 11                	je     0x5ed0a9
+  5ed098:	8b 85 7c ff ff ff    	mov    -0x84(%ebp),%eax
+  5ed09e:	83 e8 04             	sub    $0x4,%eax
+  5ed0a1:	8b 00                	mov    (%eax),%eax
+  5ed0a3:	89 85 7c ff ff ff    	mov    %eax,-0x84(%ebp)
+  5ed0a9:	3b b5 7c ff ff ff    	cmp    -0x84(%ebp),%esi
+  5ed0af:	75 10                	jne    0x5ed0c1
+  5ed0b1:	c7 45 b4 00 00 f0 42 	movl   $0x42f00000,-0x4c(%ebp)
+  5ed0b8:	c7 45 b0 00 00 60 c1 	movl   $0xc1600000,-0x50(%ebp)
+  5ed0bf:	eb 0e                	jmp    0x5ed0cf
+  5ed0c1:	c7 45 b4 00 00 00 43 	movl   $0x43000000,-0x4c(%ebp)
+  5ed0c8:	c7 45 b0 00 00 88 c1 	movl   $0xc1880000,-0x50(%ebp)
+  5ed0cf:	d9 45 b8             	flds   -0x48(%ebp)
+  5ed0d2:	d8 a3 68 fa 5e 00    	fsubs  0x5efa68(%ebx)
+  5ed0d8:	d9 5d b8             	fstps  -0x48(%ebp)
+
+Day-label size, position, and tilt
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+005ecf51 <.data+0x5dcf51>:
+  5ecf51:	83 c4 fc             	add    $0xfffffffc,%esp
+  5ecf54:	55                   	push   %ebp
+  5ecf55:	68 00 00 10 42       	push   $0x42100000
+  5ecf5a:	68 00 80 09 44       	push   $0x44098000
+  5ecf5f:	68 00 00 d8 42       	push   $0x42d80000
+  5ecf64:	68 00 00 a0 c1       	push   $0xc1a00000
+  5ecf69:	68 00 00 80 3f       	push   $0x3f800000
+  5ecf6e:	8d 95 48 fd ff ff    	lea    -0x2b8(%ebp),%edx
+  5ecf74:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  5ecf77:	e8 18 2e 00 00       	call   0x5efd94
+  5ecf7c:	8b 95 70 fd ff ff    	mov    -0x290(%ebp),%edx
+  5ecf82:	8d 83 64 fa 5e 00    	lea    0x5efa64(%ebx),%eax
+  5ecf88:	e8 97 f5 ff ff       	call   0x5ec524
+  5ecf8d:	59                   	pop    %ecx
+  5ecf8e:	83 c4 04             	add    $0x4,%esp
+  5ecf91:	55                   	push   %ebp
+  5ecf92:	68 00 00 10 42       	push   $0x42100000
+  5ecf97:	68 00 80 09 44       	push   $0x44098000
+  5ecf9c:	68 00 00 d8 42       	push   $0x42d80000
+  5ecfa1:	68 00 00 a0 c1       	push   $0xc1a00000
+  5ecfa6:	68 00 00 00 41       	push   $0x41000000
+  5ecfab:	68 00 00 80 3f       	push   $0x3f800000
+  5ecfb0:	8d 95 10 fd ff ff    	lea    -0x2f0(%ebp),%edx
+  5ecfb6:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  5ecfb9:	e8 d6 2d 00 00       	call   0x5efd94
+  5ecfbe:	8b 95 38 fd ff ff    	mov    -0x2c8(%ebp),%edx
+  5ecfc4:	8d 83 64 fa 5e 00    	lea    0x5efa64(%ebx),%eax
+  5ecfca:	e8 dd ef ff ff       	call   0x5ebfac
+
+Until label position relative to numeral group
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+005ed5bf <.data+0x5dd5bf>:
+  5ed5bf:	83 c4 fc             	add    $0xfffffffc,%esp
+  5ed5c2:	55                   	push   %ebp
+  5ed5c3:	68 6e db f6 41       	push   $0x41f6db6e
+  5ed5c8:	d9 45 ac             	flds   -0x54(%ebp)
+  5ed5cb:	d8 a3 98 fa 5e 00    	fsubs  0x5efa98(%ebx)
+  5ed5d1:	d9 9d cc fd ff ff    	fstps  -0x234(%ebp)
+  5ed5d7:	9b                   	fwait
+  5ed5d8:	ff b5 cc fd ff ff    	push   -0x234(%ebp)
+  5ed5de:	68 00 00 b6 42       	push   $0x42b60000
+  5ed5e3:	68 00 00 a0 c1       	push   $0xc1a00000
+  5ed5e8:	68 00 00 80 3f       	push   $0x3f800000
+  5ed5ed:	8d 95 4c fc ff ff    	lea    -0x3b4(%ebp),%edx
+  5ed5f3:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  5ed5f6:	e8 99 27 00 00       	call   0x5efd94
+  5ed5fb:	8b 95 74 fc ff ff    	mov    -0x38c(%ebp),%edx
+  5ed601:	8b 45 f0             	mov    -0x10(%ebp),%eax
+  5ed604:	e8 1b ef ff ff       	call   0x5ec524
+
+First two shadow-contour point constructions
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+005edb28 <.data+0x5ddb28>:
+  5edb28:	83 c4 f4             	add    $0xfffffff4,%esp
+  5edb2b:	6a 00                	push   $0x0
+  5edb2d:	6a 05                	push   $0x5
+  5edb2f:	6a 00                	push   $0x0
+  5edb31:	6a 06                	push   $0x6
+  5edb33:	8d 85 b8 fd ff ff    	lea    -0x248(%ebp),%eax
+  5edb39:	e8 5e 0d fe ff       	call   0x5ce89c
+  5edb3e:	83 c4 0c             	add    $0xc,%esp
+  5edb41:	8b 45 c8             	mov    -0x38(%ebp),%eax
+  5edb44:	8d b5 b8 fd ff ff    	lea    -0x248(%ebp),%esi
+  5edb4a:	8b f8                	mov    %eax,%edi
+  5edb4c:	a5                   	movsl  %ds:(%esi),%es:(%edi)
+  5edb4d:	a5                   	movsl  %ds:(%esi),%es:(%edi)
+  5edb4e:	a5                   	movsl  %ds:(%esi),%es:(%edi)
+  5edb4f:	a5                   	movsl  %ds:(%esi),%es:(%edi)
+  5edb50:	83 c4 f4             	add    $0xfffffff4,%esp
+  5edb53:	6a 00                	push   $0x0
+  5edb55:	6a 23                	push   $0x23
+  5edb57:	6a 00                	push   $0x0
+  5edb59:	6a 07                	push   $0x7
+  5edb5b:	8d 85 70 fa ff ff    	lea    -0x590(%ebp),%eax
+  5edb61:	e8 36 0d fe ff       	call   0x5ce89c
+
+Shadow-contour offset
+
+/tmp/deadlinep5-mac-code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+005ee26e <.data+0x5de26e>:
+  5ee26e:	55                   	push   %ebp
+  5ee26f:	68 00 00 b8 41       	push   $0x41b80000
+  5ee274:	68 00 00 b4 42       	push   $0x42b40000
+  5ee279:	8b 45 ec             	mov    -0x14(%ebp),%eax
+  5ee27c:	e8 0b e7 ff ff       	call   0x5ec98c
+  5ee281:	59                   	pop    %ecx

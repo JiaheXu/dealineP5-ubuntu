@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+deadlinep5.json
+deadlinep5.json.lock
+core
+core.*
